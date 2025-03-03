@@ -1,4 +1,12 @@
 on:
+  workflow_dispatch:
+    inputs:
+      release_name:
+        description: 'Release name'
+        required: true
+      release_tag:
+        description: 'Release tag'
+        required: true
   push:
     branches: [ "master" ]
   pull_request:
